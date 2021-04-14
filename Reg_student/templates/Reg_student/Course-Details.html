@@ -1,0 +1,70 @@
+{% include "Regsite/loader.html" %}
+{% include "Reg_student/nav-bar.html" %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta class="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Student Home Page</title>
+    <link rel='stylesheet' type="text/css" href="{% static "Regsite/css/Home.css" %}">
+    <script src="{% static "Regsite/js/home.js" %}"></script>
+</head>
+<body>
+
+<!-- Page content -->
+<div class="app">
+    <div class="container">
+        <div class="app__inner">
+            <div class="app__menu">
+                <ul class="vMenu">
+                    <li><a href="{{ site_urls }}" class="vMenu--active">Course Details</a></li>
+                </ul>
+            </div>
+            <div class="app__main">
+                <div class="text-container">
+                    <h1 class="app__main__title">{{ course.Title }}</h1>
+                    <p>Course ID: {{ course.CourseId }}
+                        <span style="padding-left: 70px">Time: {{ course.Hours }} Hr</span></p>
+                    <hr>
+                    <br>
+                    <h3 class="app__main__title">Sections:</h3>
+                    {% if  sections.first is empty %}
+                        <p>There are no sections for this course.</p>
+                    {% else %}
+                        {% for section in sections %}
+                            <h4>- Section Number: {{ section.SectionNo }}</h4>
+                            <ul>
+                                <li>Room Number: {{ section.RoomNo }}</li>
+                                <li>Time: {{ section.Time }}</li>
+                                <li>Instructors Name:
+                                    {% for instructor in instructors %}
+                                        <ul>
+                                            {% if section.InstructorId.InstructorId == instructor.InstructorId %}
+                                                <li>{{ instructor.First_name }} {{ instructor.Last_name }}</li>
+                                            {% endif %}
+                                        </ul>
+                                    {% endfor %}
+                                </li>
+                            </ul>
+                            {% if section.SectionNo in registered %}
+                                <h4 style="color:firebrick;">You already Registered in this Section.</h4>
+                            {% else %}
+                                <form action="" method="post">{% csrf_token %}
+                                    <input type="hidden" value="{{ course.CourseId }}" name="CourseId"/>
+                                    <input type="hidden" value="{{ request.session.student_id }}" name="StudentId"/>
+                                    <input type="hidden" value="{{ section.SectionNo }}" name="SectionNo"/>
+                                    <input type="submit" value="Register Now" name="{{ section }}"
+                                           class="button button__accent"/>
+                                </form>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

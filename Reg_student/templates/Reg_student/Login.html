@@ -1,0 +1,48 @@
+{% include "Regsite/loader.html" %}
+{% include "Regsite/nav-bar.html" %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta class="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Authentication RegSite</title>
+    <link rel='stylesheet' type="text/css" href="{% static "Regsite/css/Home.css" %}">
+    <script src="{% static "Regsite/js/home.js" %}"></script>
+</head>
+<body>
+<!-- Authentication pages -->
+<div class="auth">
+    <div class="container">
+        <div class="auth__inner">
+            <div class="auth__media">
+                <img src="{% static "Regsite/images/undraw_selfie.svg" %}">
+            </div>
+            <div class="auth__auth">
+                <h1 class="auth__title">Access your account</h1>
+                {% if status == 'Error' %}
+                    <p style="text-align: center;color: firebrick">Error: Please make sure that you are using the
+                        correct Student ID or Password.</p>
+                {% endif %}
+                <p>Fill in your student ID and password to proceed</p>
+                <form method='post' action="" autocompelete="new-password" role="presentation"
+                      class="form">{% csrf_token %}
+                    <input name="email" class="fakefield">
+                    <label>Student ID</label>
+                    <input type="number" name="StudentId" id="studentid" placeholder="Student ID">
+                    <label>Password</label>
+                    <input type="password" name="Password" id='password'
+                           placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
+                           autocomplete="off">
+                    <button type='submit' class="button button__accent">Log in</button>
+                    <a href="{% url 'admin:index' %}"><h6 class="left-align" style="color: #6C63FF">Login in as
+                        admin?</h6></a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

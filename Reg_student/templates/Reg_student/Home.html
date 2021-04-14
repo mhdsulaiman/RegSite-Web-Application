@@ -1,0 +1,85 @@
+{% include "Regsite/loader.html" %}
+{% include "Reg_student/nav-bar.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta class="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Student Home Page</title>
+    <link rel='stylesheet' type="text/css" href="{% static "Regsite/css/Home.css" %}">
+
+    <script src="{% static "Regsite/js/home.js" %}"></script>
+</head>
+<style>
+        .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            width: 100%;
+}
+
+.styled-table thead tr {
+    background-color: #333C44;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+</style>
+<body>
+
+<div class="page__header">
+    <div class="hero__overlay hero__overlay--gradient"></div>
+    <div class="hero__mask"></div>
+    <div class="page__header__inner">
+        <div class="container">
+            <div class="page__header__content">
+                <div class="page__header__content__inner" id='navConverter'>
+                    <h1 class="page__header__title">Simple Profile Page</h1>
+                    <p class="page__header__text" style="text-align: center">This is a simple profile page for student
+                        with the name: {{ student.First_name }} {{ student.Last_name }}. You will find the courses that
+                        you registered in or didn't register in yet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page content -->
+<div class="page">
+    <div class="container">
+        <div class="page__inner">
+
+            <div class="page__main">
+                    <h1 class="page__main__title" style="text-align: center">All Courses</h1>
+                    <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Course ID</th>
+                            <th>Course Title</th>
+                            <th>Time</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                        <tr>
+                            {% for course in courses %}
+                            <td>{{ course.CourseId }}</td>
+                            <td>{{ course.Title }}</td>
+                            <td>{{ course.Hours }} hr</td>
+                                <td><a href="{% url "Reg_student:Course-details" course_id=course.CourseId %}" style="color: red"><u>Details</u></a></td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+{% include "Regsite/loader.html" %}
+{% include "Regsite/nav-bar.html" %}
+{% load static %}
+<body>
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>RegSite Home Page</title>
+    <link rel='stylesheet' type="text/css" href="{% static "Regsite/css/Home.css" %}">
+    <script src="{% static "Regsite/js/home.js" %}"></script>
+</head>
+<body>
+<div class="hero">
+	<div class="hero__overlay hero__overlay--gradient"></div>
+	<div class="hero__mask"></div>
+	<div class="hero__inner">
+		<div class="container">
+			<div class="hero__content">
+				<div class="hero__content__inner" id='navConverter'>
+                    <h1 class="hero__title">A Learning Management System Website</h1>
+					<p class="hero__text">RegSite is a learning website aims to build a better studying experience for students and find better ways to help them organize their time by managing the courses and the classes that they register in </p>
+					<a href="{% url "Reg_student:Login" %}" class="button button__accent">Login Now</a>
+					<a href="#scrollToNext" class="button hero__button">Learn more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="hero__sub">
+		<span id="scrollToNext" class="scroll">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class='hero__sub__down' fill="currentColor" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path d="M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3z"/></svg>
+		</span>
+	</div>
+	<!-- Steps -->
+	<div class="steps landing__section">
+		<div class="container">
+			<h2>Who can use RegSite?</h2>
+			<p>Here's who we can think of, but surely creative people will surprise us.</p>
+		</div>
+		<div class="container">
+			<div class="steps__inner">
+				<div class="step">
+					<div class="step__media">
+						<img src="{% static "Regsite/images/undraw_designer.svg" %}" class="step__image">
+					</div>
+					<h4>Programmers</h4>
+					<p class="step__text">Programmers who want to study specific courses they can enjoy the experience of learning new things with us.</p>
+				</div>
+				<div class="step">
+					<div class="step__media">
+						<img src="{% static "Regsite/images/undraw_responsive.svg" %}" class="step__image">
+					</div>
+					<h4>Students</h4>
+					<p class="step__text">Students who wnt to gain more information and learn new things that may help them through out there educations.</p>
+				</div>
+				<div class="step">
+					<div class="step__media">
+						<img src="{% static "Regsite/images/undraw_creation.svg" %}" class="step__image">
+					</div>
+					<h4>Anyone</h4>
+					<p class="step__text">Anyone can join us and start gaining knowledge for better carrer.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Expanded sections -->
+	<div class="expanded landing__section">
+		<div class="container">
+			<div class="expanded__inner">
+				<div class="expanded__media">
+					<img src="{% static "Regsite/images/undraw_browser.svg" %}" class="expanded__image">
+				</div>
+				<div class="expanded__content">
+					<h2 class="expanded__title">Easy to use</h2>
+					<p class="expanded__text">RegSite is an Easy to use website with simple clicks and orders. You will find all your courses, schedules and classes in your profile.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="expanded landing__section">
+		<div class="container">
+			<div class="expanded__inner">
+				<div class="expanded__media">
+					<img src="{% static "Regsite/images/undraw_frameworks.svg" %}" class="expanded__image">
+				</div>
+				<div class="expanded__content">
+					<h2 class="expanded__title">Many Courses to find what you need.</h2>
+					<p class="expanded__text">Here in RegSite we offer you a lot of of courses in different categories. Many universities have partnership with us, Meaning that you will have tha best information offered by highly educated professors.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="expanded landing__section">
+		<div class="container">
+			<div class="expanded__inner">
+				<div class="expanded__media">
+					<img src="{% static "Regsite/images/together.svg" %}" class="expanded__image">
+				</div>
+				<div class="expanded__content">
+					<h2 class="expanded__title">Ready to learn</h2>
+					<p class="expanded__text">Start you learning journey now. Do not Hesitate, Find the courses that suit you and feed your passions.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Call To Action -->
+	<div class="cta cta--reverse">
+		<div class="container">
+			<div class="cta__inner">
+				<h2 class="cta__title">Get started now</h2>
+				<p class="cta__sub cta__sub--center">Grab the production version and begin your project instantly.</p>
+				<a href="{% url "Reg_student:Login" %}" class="button button__accent">Login Now</a>
+			</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<div class="footer footer--dark">
+		<div class="container">
+			<div style="text-align: center; color: white">
+				<h1 style="color: white">RegSite</h1>
+				<p> A New Way For Learning </p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
