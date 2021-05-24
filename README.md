@@ -12,7 +12,7 @@ Regsite is a mobile website and an android application for a simple student regi
 The website contains the following web pages:  
 1.	If a user log in as administrator, he can
 <ul>
-  a.	add, delete  or update a student information.
+  <li>a.	add, delete  or update a student information.</li>
   b.	add, delete  or update a course information.
   c.	add, delete  or update a section information.
   d.	add, delete  or update an instructor information.
