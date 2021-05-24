@@ -9,7 +9,7 @@ Regsite is a mobile website and an android application for a simple student regi
   <li>Instructor (InstructorId, Firstname, Lastname, Gender, Address, mobileNo)</li>
   <li>Enrollment (StudentId, CourseId, SectionNo,Grade)</li></p>
   
-<p>You are required to build the following web pages. 
+You are required to build the following web pages. 
 1.	If a user log in as administrator, he can
 a.	add, delete  or update a student information.
 b.	add, delete  or update a course information.
@@ -21,4 +21,3 @@ f.	Display all registered students, their courses, sections and instructors
 a.	display all courses. When the student selects a course, the details of the course and its sections are displayed.
 b.	display all sections for a course. When the student selects a section, the details of the section and its instructor are displayed.
 c.	If a student select a course, a section and an instructor, he can register himself easily. 
-</p>
