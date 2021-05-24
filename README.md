@@ -21,3 +21,9 @@ The website contains the following web pages:
    -	display all courses. When the student selects a course, the details of the course and its sections are displayed.
    -	display all sections for a course. When the student selects a section, the details of the section and its instructor are displayed.
    -	If a student select a course, a section and an instructor, he can register himself easily. 
+
+## References:
+- The Website built using Python 3.6 Django framework version 1.11.26. For more info: https://docs.djangoproject.com/en/3.2/
+
+## Website URL:
+http://mst12n6.pythonanywhere.com/Regsite/home
