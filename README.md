@@ -7,7 +7,7 @@ Regsite is a mobile website and an android application for a simple student regi
   <li>Course (CourseId, title, Hours)</li>
   <li>Section (CourseId, SectionNo, RoomNo, Time,InstructorId)</li> 
   <li>Instructor (InstructorId, Firstname, Lastname, Gender, Address, mobileNo)</li>
-  <li>Enrollment (StudentId, CourseId, SectionNo,Grade)</li></p>
+  <li>Enrollment (StudentId, CourseId, SectionNo,Grade)</li></ul></p>
   
 The website contains the following web pages:  
 1.	If a user log in as administrator, he can
