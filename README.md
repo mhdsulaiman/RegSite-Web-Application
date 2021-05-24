@@ -10,14 +10,14 @@ The database consists of the following tables:
   
 The website contains the following web pages:  
 1.	If a user log in as administrator, he can
-  -	add, delete  or update a student information.</li>
-  -	add, delete  or update a course information.
-  -	add, delete  or update a section information.
-  -	add, delete  or update an instructor information.
-  -	Search about instructor, course and section. When the admin select an item from result, the details of this item are displayed.
-  -	Display all registered students, their courses, sections and instructors.
+   -	add, delete  or update a student information.</li>
+   -	add, delete  or update a course information.
+   -	add, delete  or update a section information.
+   -	add, delete  or update an instructor information.
+   -	Search about instructor, course and section. When the admin select an item from result, the details of this item are displayed.
+   -	Display all registered students, their courses, sections and instructors.
   
 2.	If a user log in as a student, he can
-  -	display all courses. When the student selects a course, the details of the course and its sections are displayed.
-  -	display all sections for a course. When the student selects a section, the details of the section and its instructor are displayed.
-  -	If a student select a course, a section and an instructor, he can register himself easily. 
+   -	display all courses. When the student selects a course, the details of the course and its sections are displayed.
+   -	display all sections for a course. When the student selects a section, the details of the section and its instructor are displayed.
+   -	If a student select a course, a section and an instructor, he can register himself easily. 
