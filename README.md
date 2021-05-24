@@ -2,11 +2,13 @@
 Regsite is a mobile website and an android application for a simple student registration project.
 
 <p>The database consists of the following tables:
-•	Student (StudentId, Firstname, Lastname, Password, RegYeer, Gender, Address, mobileNo)
-•	Course (CourseId, title, Hours) 
-•	Section (CourseId, SectionNo, RoomNo, Time,InstructorId) 
-•	Instructor (InstructorId, Firstname, Lastname, Gender, Address, mobileNo)
-•	Enrollment (StudentId, CourseId, SectionNo,Grade)
+<ul>
+  <li>Student (StudentId, Firstname, Lastname, Password, RegYeer, Gender, Address, mobileNo)</li>
+  <li>Course (CourseId, title, Hours)</li>
+  <li>Section (CourseId, SectionNo, RoomNo, Time,InstructorId)</li> 
+  <li>Instructor (InstructorId, Firstname, Lastname, Gender, Address, mobileNo)</li>
+  <li>Enrollment (StudentId, CourseId, SectionNo,Grade)</li></p>
+  
 You are required to build the following web pages. 
 1.	If a user log in as administrator, he can
 a.	add, delete  or update a student information.
