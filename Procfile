@@ -1,1 +1,1 @@
-web: gunicorn Regsite.wsgi
+web: gunicorn RegSite-Web-Application.wsgi
