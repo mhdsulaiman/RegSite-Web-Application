@@ -22,6 +22,9 @@ The website contains the following web pages:
    -	display all sections for a course. When the student selects a section, the details of the section and its instructor are displayed.
    -	If a student select a course, a section and an instructor, he can register himself easily. 
 
+### Using:
+- Enter the admin page: **Username:** admin, **Password:** admin
+- Enter a user page: **Student ID:** 1, **Password:** 12345
 ## References:
 - The Website built using Python 3.6 Django framework version 1.11.26. For more info: https://docs.djangoproject.com/en/3.2/
 
