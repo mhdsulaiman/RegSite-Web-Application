@@ -1,3 +1,3 @@
-web: gunicorn RegSite.wsgi:application --log-file - --log-level debug
+web: gunicorn Regsite.wsgi:application --log-file - --log-level debug
 python manage.py collectstatic --noinput
 manage.py migrate
