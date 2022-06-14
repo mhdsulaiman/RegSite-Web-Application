@@ -26,4 +26,4 @@ The website contains the following web pages:
 - The Website built using Python 3.6 Django framework version 1.11.26. For more info: https://docs.djangoproject.com/en/3.2/
 
 ## Website URL:
-http://mst12n6.pythonanywhere.com/Regsite/home
+The website was hosted using heroku: [Click Here](https://regsiteweb.herokuapp.com/Regsite/home)
