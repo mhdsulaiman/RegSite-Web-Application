@@ -23,8 +23,8 @@ The website contains the following web pages:
    -	If a student select a course, a section and an instructor, he can register himself easily. 
 
 ### Using:
-- Enter the admin page: **Username:** admin, **Password:** admin
 - Enter the user page: **Student ID:** 1, **Password:** 12345
+- Enter the user page: **Student ID:** 2, **Password:** 12345
 ## References:
 - The Website built using Python 3.6 Django framework version 1.11.26. For more info: https://docs.djangoproject.com/en/3.2/
 
